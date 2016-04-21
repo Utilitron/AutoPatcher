@@ -1,0 +1,6 @@
+GameNamePatcher.x86_64
+GameNamePatcher_Data/globalgamemanagers
+GameNamePatcher_Data/globalgamemanagers.assets
+GameNamePatcher_Data/level0
+GameNamePatcher_Data/sharedassets0.assets
+GameNamePatcher_Data/sharedassets0.assets.resS
