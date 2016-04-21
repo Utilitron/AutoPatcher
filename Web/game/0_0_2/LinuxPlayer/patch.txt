@@ -1,0 +1,7 @@
+GameName.x86_64
+GameName_Data/globalgamemanagers
+GameName_Data/globalgamemanagers.assets
+GameName_Data/level0
+GameName_Data/sharedassets0.assets
+GameName_Data/sharedassets0.assets.resS
+GameName_Data/sharedassets0.resource
