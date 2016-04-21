@@ -12,6 +12,38 @@ public class Updater : MonoBehaviour {
 
 	private ArrayList downloadList = new ArrayList();
 
+	private void Start() {
+		var _this = this;
+		StartCoroutine(CheckForGameUpdates ((updateRequired) => { 
+			_this.AfterUpdateGameCheck(updateRequired);
+		}));
+	}
+
+	public void AfterUpdateGameCheck(bool gameUpdateRequired) {
+		updatePanel.gameObject.SetActive(false);
+		Debug.Log ("AfterUpdateGameCheck: " + gameUpdateRequired);
+		if (gameUpdateRequired) {
+			var _this = this;
+			StartCoroutine(CheckPatcherUpdates ((updateRequired) => { 
+				_this.AfterUpdatePatcherCheck(updateRequired);
+			}));
+		} else {
+			GameObject.Find ("PatchPanel").SetActive(false);
+			ChangeTo(mainMenuPanel);
+		}	
+	}
+
+	public void AfterUpdatePatcherCheck(bool updateRequired) {
+		Debug.Log ("AfterUpdatePatcherCheck: " + updateRequired);
+		updatePanel.gameObject.SetActive(false);
+		if (updateRequired) {
+			StartCoroutine(ApplyPatcherUpdate ());
+		} else {
+			ApplyGameUpdate ();
+		}	
+	}
+
+
 	public IEnumerator CheckForGameUpdates(System.Action<bool> callback) {
 		bool updateRequired = false;
 
