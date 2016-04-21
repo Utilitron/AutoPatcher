@@ -9,9 +9,9 @@ If there is a new version of the patcher it downloads it then launches it.
 The patcher checks for a new version of the game and downloads it then launches it.
 
 The urls are set up as: 
-http://website.com/game/version_number/platform
-http://website.com/patcher/version_number/platform
+game/version_number/platform
+patcher/version_number/platform
 
 example: 
-http://website.com/game/0_01/LinuxPlayer/
+website.com/game/0_0_1/LinuxPlayer/
 
