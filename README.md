@@ -10,6 +10,7 @@ The patcher checks for a new version of the game and downloads it then launches 
 
 The urls are set up as: 
 game/version_number/platform
+
 patcher/version_number/platform
 
 example: 
